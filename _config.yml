@@ -9,8 +9,8 @@
 title: Sai Shashank Kalakonda 
 email: sai.shashank@research.iiit.ac.in
 description: Home Page of ActionGPT
-baseurl: "https://actiongpt.github.io/"
-url: "https://actiongpt.github.io/"
+baseurl: ""
+url: ""
 
 include:
   - .htaccess
