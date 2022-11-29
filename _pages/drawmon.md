@@ -23,7 +23,7 @@ Generalized Zero Shot Action Generation</h2>
 
 <p style="text-align: center;">
 
-[Paper](){: .btn}
+[Paper](https://arxiv.org/pdf/2211.15603){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 [Code](){: .btn}
