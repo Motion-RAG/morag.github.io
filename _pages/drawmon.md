@@ -23,7 +23,7 @@ Generalized Zero Shot Action Generation</h2>
 
 <p style="text-align: center;">
 
-[Paper](){: .btn}
+[Paper](https://arxiv.org/abs/2211.15603){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 [Code](){: .btn}
@@ -34,7 +34,7 @@ Generalized Zero Shot Action Generation</h2>
 <center>
 <figure>
         <div id="teaser">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActionGPT_Teaser_diagram_v4.png" width="900px" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/actiongpt_teaser.gif" width="50%" />
         </div>
     <p>&nbsp;</p>
     <figcaption>
