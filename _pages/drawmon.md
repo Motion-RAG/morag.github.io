@@ -26,7 +26,7 @@ Generalized Zero Shot Action Generation</h2>
 [Paper](https://arxiv.org/abs/2211.15603){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Code](){: .btn}
+[Code](https://github.com/actiongpt/actiongpt){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 </p>
