@@ -31,10 +31,10 @@ Generalized Action Generation</h2>
 
 </p>
 
-<center>
+<center id="overview">
 <figure>
         <div id="teaser">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/actiongpt_teaser.gif" width="50%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/actiongpt_teaser2.gif" width="75%" />
         </div>
     <p>&nbsp;</p>
     <figcaption>
@@ -59,10 +59,10 @@ We introduce Action-GPT,
 
 <hr style="border: 1px solid #555555;">
 
-<center>
+<center id="overview">
 <figure>
-        <div id="overview">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActGPT_Updated_Arch_v1.png" width="900px" />
+        <div >
+    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActGPT_Updated_Arch_v1.png" width="100%" style="box-shadow: 0px 0px 0px;" />
         </div>
     <p>&nbsp;</p>
     <figcaption>
@@ -74,6 +74,7 @@ We introduce Action-GPT,
 </figure>
 </center>
 
+
 <hr style="border: 1px solid #555555;">
 
 
@@ -82,7 +83,7 @@ We introduce Action-GPT,
 <center>
 <figure>
         <div id="comparisions">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActionGPT-Main-diagram.png" width="900px" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActionGPT-Main-diagram.png" width="100%" />
         </div>
     <p>&nbsp;</p>
     <figcaption>
@@ -91,7 +92,7 @@ We introduce Action-GPT,
 </figure>
 </center>
 
-<hr style="border: 1px solid #555555;">
+<!-- <hr style="border: 1px solid #555555;"> -->
 
 
 
