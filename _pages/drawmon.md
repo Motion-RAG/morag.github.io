@@ -8,7 +8,7 @@ permalink: /
 
 [comment]: Title
 <h2 align="center">Action-GPT:<br>Leveraging Large-scale Language Models for Improved and
-Generalized Zero Shot Action Generation</h2>
+Generalized Action Generation</h2>
 
 [comment]: Authors
 <p style="text-align: center;">
