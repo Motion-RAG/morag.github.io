@@ -62,7 +62,7 @@ We introduce Action-GPT,
 <center id="overview">
 <figure>
         <div >
-    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActGPT_Updated_Arch_v1.png" width="100%" style="box-shadow: 0px 0px 0px;" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActGPT_Updated_Arch_v1.gif" width="100%" style="box-shadow: 0px 0px 0px;" />
         </div>
     <p>&nbsp;</p>
     <figcaption>
