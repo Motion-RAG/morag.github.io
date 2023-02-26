@@ -108,7 +108,7 @@ We introduce Action-GPT,
       allowfullscreen="true">
   </iframe> -->
   <video width="70%" preload="auto" muted controls>
-    <source src="{{ site.url }}{{ site.baseurl }}/images/actiongt/qualitative_analysis.mp4" type="video/mp4">
+    <source src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/qualitative_analysis.mp4" type="video/mp4">
     </video>
   <p>&nbsp;</p>
   <figcaption>
