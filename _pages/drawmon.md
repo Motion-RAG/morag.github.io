@@ -100,14 +100,7 @@ We introduce Action-GPT,
     </figcaption>
 </figure> -->
 <div class="embed-container">
-  <!-- <iframe
-      src="https://www.youtube.com/embed/2FHvXF5sXNw"
-      width="700"
-      height="480"
-      frameborder="0"
-      allowfullscreen="true">
-  </iframe> -->
-  <video width="70%" preload="auto" muted controls>
+  <video width="100%" preload="auto" muted controls>
     <source src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/qualitative_analysis.mp4" type="video/mp4">
     </video>
   <p>&nbsp;</p>
