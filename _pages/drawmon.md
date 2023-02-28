@@ -30,7 +30,19 @@ Generalized Action Generation</h2>
 
 </p>
 
-<center id="overview">
+<center>
+<div class="embed-container">
+  <video width="100%" preload="auto" muted controls loop autoplay>
+    <source src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/teaser.mp4" type="video/mp4">
+    </video>
+  <p>&nbsp;</p>
+  <figcaption>
+        Action-GPT framework
+    </figcaption>
+</div>
+</center>
+
+<!-- <center id="overview">
 <figure>
         <div id="teaser">
     <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/actiongpt_teaser2.gif" width="75%" />
@@ -41,6 +53,7 @@ Generalized Action Generation</h2>
     </figcaption>
 </figure>
 </center>
+ -->
 
 <hr style="border: 1px solid #555555;">
 
