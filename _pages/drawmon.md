@@ -31,18 +31,17 @@ Generalized Action Generation</h2>
 </p>
 
 
-<center id="overview">
+<center>
 <figure>
-        <div id="teaser">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/generations_teaser.gif" width="75%" />
-        </div>
+    <div class="embed-container">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/generations_teaser.gif" width="75%" />
+    </div>
     <p>&nbsp;</p>
     <figcaption>
         Sample text conditioned action generations from our large language model based approach (Action-GPT-TEACH). By incorporating large language models, our approach results in noticeably improved generation quality for seen and useen categories.
     </figcaption>
 </figure>
 </center>
-
 
 <hr style="border: 1px solid #555555;">
 
@@ -59,13 +58,10 @@ We introduce Action-GPT,
 
 <hr style="border: 1px solid #555555;">
 
-<center>
-
-<h3 align="center"> Motivation </h3>
-
+<h3 align="center"> Motivation </h3> 
 <center>
 <div class="embed-container">
-  <video width="100%" preload="auto" muted controls loop autoplay>
+  <video width="100%" preload="auto" muted controls>
     <source src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/teaser.mp4" type="video/mp4">
     </video>
   <p>&nbsp;</p>
@@ -78,6 +74,8 @@ We introduce Action-GPT,
 <hr style="border: 1px solid #555555;">
 
 <center id="overview">
+<h3 align="center"> Overview </h3> 
+
 <figure>
         <div >
     <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActGPT_Updated_Arch_v1.gif" width="100%" style="box-shadow: 0px 0px 0px;" />
@@ -129,7 +127,7 @@ We introduce Action-GPT,
 @InProceedings{Action-GPT,
 title={Action-GPT: Leveraging Large-scale Language Models for Improved and Generalized Action Generation},
 author={Kalakonda, Sai Shashank and Maheshwari, Shubh and Sarvadevabhatla, Ravi Kiran},
-booktitle ={arXiv preprint https://arxiv.org/abs/2211.15603},
+booktitle={arXiv preprint https://arxiv.org/abs/2211.15603},
 year={2022}
 }
 ```
