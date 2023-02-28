@@ -30,30 +30,19 @@ Generalized Action Generation</h2>
 
 </p>
 
-<center>
-<div class="embed-container">
-  <video width="100%" preload="auto" muted controls loop autoplay>
-    <source src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/teaser.mp4" type="video/mp4">
-    </video>
-  <p>&nbsp;</p>
-  <figcaption>
-        Action-GPT framework
-    </figcaption>
-</div>
-</center>
 
-<!-- <center id="overview">
+<center id="overview">
 <figure>
         <div id="teaser">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/actiongpt_teaser2.gif" width="75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/generations_teaser.gif" width="75%" />
         </div>
     <p>&nbsp;</p>
     <figcaption>
-        Sample text conditioned action generations from a state of the art model TEACH (top row) and from our large language model based approach (Action-GPT-TEACH - bottom row). By incorporating large language models, our approach results in noticeably improved generation quality for seen and useen categories. The conditioning action phrases for seen categories are taken from BABEL whereas unseen action phrases were provided by a user.
+        Sample text conditioned action generations from our large language model based approach (Action-GPT-TEACH). By incorporating large language models, our approach results in noticeably improved generation quality for seen and useen categories.
     </figcaption>
 </figure>
 </center>
- -->
+
 
 <hr style="border: 1px solid #555555;">
 
@@ -67,6 +56,24 @@ We introduce Action-GPT,
 - We show that utilizing these detailed descriptions instead of the original action phrases leads to better alignment of text and motion spaces.
 - Our experiments show qualitative and quantitative improvement in the quality of synthesized motions produced by recent text-to-motion models.
 - Code, pretrained models and sample videos will be made available. 
+
+<hr style="border: 1px solid #555555;">
+
+<center>
+
+<h3 align="center"> Motivation </h3>
+
+<center>
+<div class="embed-container">
+  <video width="100%" preload="auto" muted controls loop autoplay>
+    <source src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/teaser.mp4" type="video/mp4">
+    </video>
+  <p>&nbsp;</p>
+  <figcaption>
+        Action-GPT Motivation
+    </figcaption>
+</div>
+</center>
 
 <hr style="border: 1px solid #555555;">
 
