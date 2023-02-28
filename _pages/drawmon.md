@@ -73,12 +73,12 @@ We introduce Action-GPT,
 
 <hr style="border: 1px solid #555555;">
 
-<center id="overview">
+<center>
 <h3 align="center"> Overview </h3> 
 
 <figure>
-        <div >
-    <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/ActGPT_Updated_Arch_v1.gif" width="100%" style="box-shadow: 0px 0px 0px;" />
+        <div style = "position:relative; left:-120px;">
+    <img  src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/overview.gif" width="130%" height="100%" style="box-shadow: 0px 0px 0px"/>
         </div>
     <p>&nbsp;</p>
     <figcaption>
