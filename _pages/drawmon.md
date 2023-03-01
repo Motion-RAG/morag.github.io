@@ -34,7 +34,7 @@ Generalized Action Generation</h2>
 <center>
 <figure>
     <div class="embed-container">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/generations_teaser.gif" width="75%" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/teaser.gif" width="75%" />
     </div>
     <p>&nbsp;</p>
     <figcaption>
@@ -60,15 +60,15 @@ We introduce Action-GPT,
 
 <h3 align="center"> Motivation </h3> 
 <center>
-<div class="embed-container">
-  <video width="100%" preload="auto" muted controls>
-    <source src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/teaser.mp4" type="video/mp4">
-    </video>
-  <p>&nbsp;</p>
-  <figcaption>
-        Action-GPT Motivation
+<figure>
+    <div class="embed-container">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/motivation.gif" width="100%" />
+    </div>
+    <p>&nbsp;</p>
+    <figcaption>
+        Action-GPT Motivation: We generate richer and fine-grained body movement descriptions of the actions, by carefully prompting large-language models. These detailed descriptions instead of the original action phrases leads to better alignment of text and motion spaces resulting in an enhanced quality of motion sequence generations.
     </figcaption>
-</div>
+</figure>
 </center>
 
 <hr style="border: 1px solid #555555;">
@@ -109,7 +109,7 @@ We introduce Action-GPT,
 </center> -->
 <center>
 <div class="embed-container">
-  <video width="100%" preload="auto" muted controls>
+  <video width="100%" preload="auto" controls>
     <source src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/qualitative_analysis.mp4" type="video/mp4">
     </video>
   <p>&nbsp;</p>
