@@ -7,14 +7,13 @@ permalink: /
 ---
 
 [comment]: Title
-<h2 align="center">Action-GPT:<br>Leveraging Large-scale Language Models for Improved and
-Generalized Action Generation</h2>
+<h2 align="center">MoRAG:<br>Multi-Fusion Retrieval Augmented Generation Framework for Human Motion</h2>
 
 [comment]: Authors
 <p style="text-align: center;">
 <a href="https://www.linkedin.com/in/sai-shashank-54288219b" style="color: #CC0000"> Sai Shashank Kalakonda</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://shubhmaheshwari.github.io/website" style="color: #CC0000"> Shubh Maheshwari</a>
+<a href="https://shubhmaheshwari.github.io" style="color: #CC0000"> Shubh Maheshwari</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://ravika.github.io" style="color: #CC0000"> Ravi Kiran Sarvadevabhatla</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -33,13 +32,15 @@ Generalized Action Generation</h2>
 
 <center>
 <figure>
-    <div class="embed-container">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/teaser.gif" width="75%" />
-    </div>
-    <p>&nbsp;</p>
-    <figcaption>
-        Sample text conditioned action generations from our large language model based approach (Action-GPT-TEACH). By incorporating large language models, our approach results in noticeably improved generation quality for seen and useen categories.
+<div class="embed-container">
+  <video width="100%" preload="auto" controls autoplay muted loop playsinline>
+    <source src="{{ site.url }}{{ site.baseurl }}/images/morag/Teaser.mp4" type="video/mp4">
+    </video>
+  <p>&nbsp;</p>
+  <figcaption>
+    MoRAG incorporats part-specific motion retrieval models to enhances the quality of generation and retrieval tasks for diverse text descriptions.
     </figcaption>
+</div>
 </figure>
 </center>
 
@@ -49,15 +50,18 @@ Generalized Action Generation</h2>
 
 <h3 align="center"> Abstract </h3>
 </center>
-We introduce Action-GPT,
-- A plug and play framework for incorporating Large Language Models (LLMs) into text-based action generation models
-- By carefully crafting prompts for LLMs, we generate richer and fine-grained descriptions of the action.
-- We show that utilizing these detailed descriptions instead of the original action phrases leads to better alignment of text and motion spaces.
-- Our experiments show qualitative and quantitative improvement in the quality of synthesized motions produced by recent text-to-motion models.
+We introduce MoRAG, 
+- a novel multi-part fusion based retrieval- augmented generation strategy for text-based human motion generation. 
+- The method enhances motion diffusion models by leveraging additional knowledge obtained through an improved motion retrieval process. 
+- By effectively prompting large language models (LLMs), we address spelling errors and rephrasing issues in motion retrieval. 
+- Our approach utilizes a multi-part retrieval strategy to improve the generalizability of motion retrieval across the language space. We create diverse samples through spatial composition of the retrieved motions. 
+- Furthermore, by utilizing low-level, part-specific motion information, we are able
+to construct motion samples for unseen text descriptions.
+- Our experiments demonstrate that our framework can serve as a plug-and-play module, improving the performance of motion diffusion models.
 - Code, pretrained models and sample videos will be made available. 
 
 <hr style="border: 1px solid #555555;">
-
+<!-- 
 <h3 align="center"> Motivation </h3> 
 <center>
 <figure>
@@ -71,21 +75,20 @@ We introduce Action-GPT,
 </figure>
 </center>
 
-<hr style="border: 1px solid #555555;">
+<hr style="border: 1px solid #555555;"> -->
 
 <center>
 <h3 align="center"> Overview </h3> 
 
 <figure>
-        <div style = "position:relative; left:-120px;">
-    <img  src="{{ site.url }}{{ site.baseurl }}/images/actiongpt/overview.gif" width="130%" height="100%" style="box-shadow: 0px 0px 0px"/>
+        <div style = "position:relative">
+            <video width="100%" preload="auto" controls autoplay muted loop playsinline>
+                <source src="{{ site.url }}{{ site.baseurl }}/images/morag/MoRAG_Framework.mp4" type="video/mp4">
+    </video>
         </div>
     <p>&nbsp;</p>
     <figcaption>
-        Action-GPT Overview: Given an action phrase, we first create a suitable prompt using an engineered prompt function. The result is passed to a large-scale language model (GPT-3) to obtain multiple action descriptions containing fine-grained body movement details. 
-        The corresponding deep text representations are obtained using Description Embedder. The aggregated version of these embeddings is processed by the Text Encoder. During training, the action pose sequence is processed by a Motion Encoder. 
-         The encoders are associated with a deterministic sampler (autoencoder) or a VAE style generative model.
-        During training(shown with black), the latent text embedding and the latent motion embedding are aligned. During inference(shown in green), the sampled text embedding is provided to the Motion Decoder which outputs the generated action sequence.
+        Given a text description <i>text</i>, we generate part-specific descriptions corresponding to "Torso," "Hands," and "Legs" by prompting an LLM. These generated descriptions are used as queries to retrieve corresponding part-specific motions: R<sup>i</sup><sub>torso</sub>, R<sup>i</sup><sub>hands</sub>, and R<sup>i</sup><sub>legs</sub> from the part-specific motion databases D<sup>i</sup><sub>torso</sub>, D<sup>i</sup><sub>hands</sub>, and D<sup>i</sup><sub>legs</sub>, respectively. The retrieved motions are then fused to construct a full-body motion sequence C<sup>i</sup> that aligns with the input text. The constructed motion samples are used as additional information in the motion generation pipeline during both training and inference, alongside the input text, to further improve model performance.
     </figcaption>
 </figure>
 </center>
@@ -94,7 +97,13 @@ We introduce Action-GPT,
 <hr style="border: 1px solid #555555;">
 
 
-<h3 align="center"> Comparisons </h3> 
+<!-- <h3 align="center"> Comparisons </h3> 
+---
+gallery_a: [ abc.png, def.png, xyz.png ]
+
+---
+{% include carousel.html height="50"
+   unit="%" duration="7" images=gallery_a %} -->
 
 <!-- <center>
 <figure>
@@ -106,7 +115,7 @@ We introduce Action-GPT,
         Visual comparison of generated motion sequences across models trained on Action-GPT framework on BABEL dataset. Note that the generations using Action-GPT are well-aligned with the semantic information of action phrases. The example in right bottom-row shows latent space editing similar to  MotionCLIP. Action-GPT is better able to transfer the drink from mug style from standing to sitting pose.
     </figcaption>
 </figure>
-</center> -->
+</center> 
 <center>
 <div class="embed-container">
   <video width="100%" preload="auto" controls>
@@ -117,18 +126,18 @@ We introduce Action-GPT,
         Visual comparison of generated motion sequences across models trained on Action-GPT framework on BABEL dataset. Note that the generations using Action-GPT are well-aligned with the semantic information of action phrases. The example in the end shows latent space editing similar to  MotionCLIP. Action-GPT is better able to transfer the drink from mug style from standing to sitting pose.
     </figcaption>
 </div>
-</center>
+</center> -->
 
 <p>&nbsp;</p>
 
 <h3 align="center"> Citation </h3>
 
 ```
-@InProceedings{Action-GPT,
-title={Action-GPT: Leveraging Large-scale Language Models for Improved and Generalized Action Generation},
+@InProceedings{MoRAG,
+title={MoRAG: Multi-Fusion Retrieval Augmented Generation Framework for Human Motion},
 author={Kalakonda, Sai Shashank and Maheshwari, Shubh and Sarvadevabhatla, Ravi Kiran},
-booktitle={arXiv preprint https://arxiv.org/abs/2211.15603},
-year={2022}
+booktitle={arXiv preprint},
+year={2024}
 }
 ```
 
