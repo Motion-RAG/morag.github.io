@@ -1,7 +1,7 @@
 ---
-title: "Action-GPT"
+title: "MoRAG"
 layout: gridlay
-excerpt: "Action-GPT"
+excerpt: "MoRAG"
 sitemap: false
 permalink: /
 ---
