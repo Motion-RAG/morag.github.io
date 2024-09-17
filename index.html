@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    #blue {
+    background-color: rgb(166,166,240);
+  }
+    #green {
+    background-color: {166,240,166};
+  }
+  </style>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content=" Multi-Fusion Retrieval Augmented Generation for Human Motion">
+  <meta name="keywords" content="Motion Generation, Motion Retrieval">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MoRAG - Multi-Fusion Retrieval Augmented Generation for Human Motion</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
- -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
@@ -42,47 +36,6 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -101,7 +54,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>IIIT Hyderabad</span>
-            <span class="author-block"><sup>2</sup>UCSD</span>
+            <span class="author-block"><sup>2</sup>University of California San Diego</span>
           </div>
 
           <div class="column has-text-centered">
@@ -117,7 +70,7 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -137,7 +90,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/Motion-RAG/MoRAG"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -179,6 +132,16 @@
 </section>
 
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/Videos/MoRAG-Framework.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -209,21 +172,6 @@
       </div>
     </div> -->
     <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/Videos/MoRAG-Framework.mp4"
-                type="video/mp4">
-      </video>
-      <!-- <h2 class="subtitle has-text-centered"> -->
-        <!-- <span class="dnerf">MoRAG</span> improves the quality of generation and retrieval tasks across various text descriptions. -->
-      <!-- </h2> -->
-    </div>
   </div>
 </section>
 
@@ -325,15 +273,14 @@
   <div class="container is-max-desktop">
 
       <h2 class="title is-3 has-text-centered">Prompt Strategy</h2>
-      <p class="has-text-centered">
-        The usage of large language models (LLMs) in MoRAG's pipeline enables it to handle text changes 
-        such as rephrasing, substitution, and spell correction, thereby enhancing the model's ability to 
-        retrieve motion sequences with improved accuracy.<br/><br/>
+      <p>
+        We prompt large language models (LLMs) to generate part-specific motion descriptions, which are then used to retrieve corresponding motion sequences for each part. These sequences are composed to create a full-body motion sequence that aligns with the input text.
       </p>
-
+      <br/><br/>
       <div class="content">
         <h2 class="title is-4 has-text-centered">Prompt Examples</h2>
           <img src="./static/Videos/prompt.jpeg" alt="Prompt Examples">
+          <p>We illustrate the LLM-generated part-specific outputs for text descriptions alongside their corresponding top-1 retrieval results to demonstrate the effectiveness of our prompt strategy. The HumanML3D ID for the retrieved motions is indicated with the # symbol</p>
       </div>
   </div>
 </section>
@@ -349,8 +296,7 @@
         <div class="content">
           <h2 class="title is-4">Significance of <b>Position</b></h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            Specifically prompting for the <b>position</b> of body parts provides their global orientation, leading to improved motion retrieval.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/Videos/Position-Significance.mp4"
@@ -366,8 +312,7 @@
         <!-- <div class="columns is-centered"> -->
           <div class="content">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              We avoid retrieving separate motions for left and right body parts to prevent asynchronous movements in the composed full-body motion sequence.
             </p>
             <video id="matting-video" controls playsinline height="100%">
               <source src="./static/Videos/Issue-with-left-and-right-Retrieval-Strategy/A_person_is_taking_large_strides_while_walking.mp4"
@@ -388,7 +333,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Text Robustness</h2>
-      <p class="has-text-centered">
+      <p>
         The usage of large language models (LLMs) in MoRAG's pipeline enables it to handle text changes 
         such as rephrasing, substitution, and spell correction, thereby enhancing the model's ability to 
         retrieve motion sequences with improved accuracy.<br/><br/>
@@ -446,7 +391,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Spatial Composition</h2>
-
+      <p>The composition workflow involves combining part-specific motions, R<sub>part</sub>, retrieved from their respective part-specific databases, based on part-specific descriptions generated by the large language model(LLM).</p>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <video poster="" autoplay controls muted loop playsinline height="100%">
@@ -456,7 +401,13 @@
         </div>
         <div class="item">
           <video poster="" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/Videos/Spatial_Composition/A_person_is_running_with_their_arms_crossed.mp4"
+            <source src="./static/Videos/Spatial_Composition/A_person_is_standing_on_one_leg_and_raising_both_hands.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/Videos/Spatial_Composition/A_person_is_walking_with_their_arms_circling_around.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -468,22 +419,16 @@
         </div>
         <div class="item">
           <video poster="" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/Videos/Spatial_Composition/A_person_is_running_with_their_arms_crossed.mp4"
+            <source src="./static/Videos/Spatial_Composition/A_person_is_standing_on_one_leg_and_raising_both_hands.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item">
           <video poster="" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/Videos/Spatial_Composition/A_person_is_running_with_their_arms_crossed.mp4"
+            <source src="./static/Videos/Spatial_Composition/A_person_is_walking_with_their_arms_circling_around.mp4"
                     type="video/mp4">
           </video>
-        </div>
-        <div class="item">
-          <video poster="" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/Videos/Spatial_Composition/A_person_is_running_with_their_arms_crossed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>        
+        </div> 
       </div>
     </div>
   </div>
@@ -494,10 +439,8 @@
   <div class="container is-max-desktop">
 
       <h2 class="title is-3 has-text-centered">Quantitative Analysis</h2>
-      <p class="has-text-centered">
-        The usage of large language models (LLMs) in MoRAG's pipeline enables it to handle text changes 
-        such as rephrasing, substitution, and spell correction, thereby enhancing the model's ability to 
-        retrieve motion sequences with improved accuracy.<br/><br/>
+      <p>
+        We compare the results of text-to-motion generation between ours and the state-of-the-art diffusion based methods on HumanML3D dataset. Our method achieves better semantic relevance, diversity, and multimodality performances. <h2 style="background-color:rgb(166,240,166)">Indicate best results</h2>, <h2 style="background-color:rgb(166,166,240)">indicates second best results</h2>.<br/><br/>
       </p>
 
       <div class="content">
@@ -508,14 +451,15 @@
 </section>
 
 <section class="section">
+  <h2 class="title is-3 has-text-centered">Qualitative Analysis</h2>
+  <p>We present qualitative analysis across three key aspects: (1) Generalizability, (2) Zero-shot performance, and (3) Diversity, for both MoRAG (retrieval model) and MoRAG-Diffuse (generative model). </p>
   <h2 class="title is-3 has-text-centered">MoRAG</h2>
+    <p>
+      We provide baseline comparisons for generalizability and zero-shot capabilities against TMR++.
+    </p>
   <div class="container is-max-desktop">
     <div class="content">
       <h2 class="title is-4 has-text-centered">Generalizability</h2>
-      <p>
-        Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-        would be impossible without nerfies since it would require going through a wall.
-      </p>
       <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
         <source src="./static/Videos/MoRAG/Generalizability/Eating.mp4"
                 type="video/mp4">
@@ -594,13 +538,12 @@
 
 <section class="section">
   <h2 class="title is-3 has-text-centered">MoRAG-Diffuse</h2>
+    <p>
+      We provide baseline comparisons for generalizability and zero-shot capabilities against ReMoDiffuse.
+    </p>
   <div class="container is-max-desktop">
     <div class="content">
       <h2 class="title is-4 has-text-centered">Generalizability</h2>
-      <p>
-        Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-        would be impossible without nerfies since it would require going through a wall.
-      </p>
       <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
         <source src="./static/Videos/MoRAG-Diffuse/Generalizability/Lunging.mp4"
                 type="video/mp4">
@@ -679,11 +622,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@InProceedings{MoRAG,
+  author    = {Kalakonda, Sai Shashank and Maheshwari, Shubh and Sarvadevabhatla, Ravi Kiran},
+  title     = {MoRAG - Multi-Fusion Retrieval Augmented Generation for Human Motion},
+  booktitle   = {arXiv preprint},
+  year      = {2024},
 }</code></pre>
   </div>
 </section>
@@ -693,10 +636,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -704,16 +647,9 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            This website was adapted from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
